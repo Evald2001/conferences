@@ -19,10 +19,10 @@ class ConferencesController extends Controller
      *
      *
      */
-    public function index()
+    public function index(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
-        $conferences=conferences::all();
-        return view('conferences.index')->with('conferences',$conferences);
+        $conference = conferences::all();
+        return view('conferences.show', ['conferences'=>$conference]);
     }
 
     /**
@@ -45,9 +45,11 @@ class ConferencesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(conferences $conference)
+    public function show(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('conferences.show')->with('conference',$conference);
+        $conference = conferences::all();
+        return view('conferences.show', ['conferences'=>$conference]);
+        //return view('conferences.show')->with('conference',$conference);
     }
 
     /**

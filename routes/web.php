@@ -16,7 +16,7 @@ use App\Http\Controllers\ConferencesController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('conferences/indexNotLogged');
 });
 
 
