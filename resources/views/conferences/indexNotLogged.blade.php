@@ -2,7 +2,7 @@
 
 @section('content')
  <div class="container">
-{{--    @include('messages')--}}
+    @include('messages')
      @if(isset($conferences))
  <table class="table">
   <thead>
@@ -28,7 +28,7 @@
 </tbody>
 </table>
      @else
-         <p>No users found.</p>
+         <p>Doesnt display users when not logged in, cant get $conferences variable, cant find a fix on the internet :)))).</p>
      @endif
 
  </div>

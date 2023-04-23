@@ -12,31 +12,39 @@ class ConferencesTableSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('table_name')->insert([
+        DB::table('conferences')->insert([
             [
-                'name' => 'Bussines and money',
-                'date' => '2022-01-01',
+                'Name' => 'Bussines and money',
+                'Date' => '2022-01-01',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                'location' => 'New York, NY'
+                'Location' => 'New York, NY'
             ],
             [
-                'name' => 'Tourism and money',
-                'date' => '2022-08-01',
+                'Name' => 'Tourism and money',
+                'Date' => '2022-08-01',
                 'description' => 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-                'location' => 'Los Angeles, CA'
+                'Location' => 'Los Angeles, CA'
             ],
             [
-                'name' => 'IT and money',
-                'date' => '2022-04-01',
+                'Name' => 'IT and money',
+                'Date' => '2022-04-01',
                 'description' => 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-                'location' => 'San Francisco, CA'
+                'Location' => 'San Francisco, CA'
             ],
             [
-                'name' => 'Rap and money',
-                'date' => '2022-02-012',
+                'Name' => 'Rap and money',
+                'Date' => '2022-02-012',
                 'description' => 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-                'location' => 'New York, NY'
+                'Location' => 'New York, NY'
             ]
             ]);
+        DB::table('users')->insert([
+            [
+                'name' => 'AAA',
+                'email' => 'a@a.com',
+                'password' => 'a'
+            ],
+
+        ]);
     }
 }
