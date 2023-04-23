@@ -2,7 +2,8 @@
 
 @section('content')
  <div class="container">
-    @include('messages')
+{{--    @include('messages')--}}
+     @if(isset($conferences))
  <table class="table">
   <thead>
     <tr>
@@ -15,7 +16,7 @@
     </tr>
   </thead>
   <tbody>
-    @foreach($conference as $conference)
+    @foreach($conferences as $conference)
     <tr>
       <th scope="row">{{$conference->id}}</th>
       <td>{{$conference->Name}}</td>
@@ -26,5 +27,9 @@
     @endforeach
 </tbody>
 </table>
+     @else
+         <p>No users found.</p>
+     @endif
+
  </div>
 @endsection
